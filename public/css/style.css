@@ -1,0 +1,23 @@
+.register-sesion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
+.content-form{
+    color: rgb(71, 85, 57);
+    background-color: rgba(132, 129, 102, 0.897);
+    padding-bottom: 30%;
+    
+}
+
+
+
+ button{
+    width: 80px;
+    background-color:rgb(82, 62, 52) ;
+    color: beige;
+    
+    
+}
