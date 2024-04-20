@@ -1,15 +1,48 @@
+*{
+    
+    margin: 0%;
+}
+
+
+
+.referent{
+    filter: drop-shadow(5px 5px 3px rgb(77, 74, 74));
+    padding: 10px;
+}
+
+header{
+    height: 120px;
+    width: 100%;
+    
+    background-color: rgb(81, 68, 50);
+    margin-bottom: 100px;
+    
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+}
+
+
+
+
 .register-sesion{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+   
     
 }
 .content-form{
+   width: 50%; 
     color: rgb(71, 85, 57);
     background-color: rgba(132, 129, 102, 0.897);
-    padding-bottom: 30%;
-    
+    padding: 10%;
+    border-radius: 15px;
+    margin: auto;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.391);
 }
 
 
@@ -20,4 +53,16 @@
     color: beige;
     
     
+}
+
+button:hover{
+    background-color: lightgoldenrodyellow;
+    color: black ;
+}
+footer{
+    margin-top: 50px;
+    height: 161px;
+    width: 100%;
+    
+    background-color: rgb(81, 68, 50);
 }

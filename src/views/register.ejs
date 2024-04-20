@@ -4,25 +4,36 @@
     <body>
         <%- include('partials/header') %>
             <section class="content-form">
-
-                <form action="" class="register-sesion">
-
-                    <h1>registro</h1>
-                    <section  class="register-sesion">
-                        <label for="">nombre</label>
-                        <input type="text">
-                        <label for="">apellido</label>
-                        <input type="text">
-                        <label for="">username</label>
-                        <input type="text">
-                        <label for="">email</label>
-                        <input type="email">
-                        <label for="">contraseña</label>
-                        <input type="password">
-                    </section>
-
-                    <button>enviar</button>
-
+                <% if (locals.errors) { %>
+                    <% errors.forEach(error => { %>
+                     
+                        <form action="POST" action="" class="register-sesion" enctype="multipart/form-data">
+                            
+                            <h1 class="referent">registro</h1>
+                            <section  class="register-sesion">
+                                <label for="">nombre</label>
+                                <input type="text" name="name" value="<%= locals.oldData && oldData.name? oldData.name : ""%>">
+                                <p><%= error.msg  %></p>
+                                <label for="">apellido</label>
+                                <input type="text" name="lastName" value="<%= locals.oldData && oldData.lastName? oldData.lastName: "" %>">
+                                <p><%= error.msg  %></p>
+                                <label for="">username</label>
+                                <input type="text" name="userName" value="<%= locals.oldData && oldData.userName? oldData.userName : "" %>">
+                                <p><%= error.msg  %></p>
+                                <label for="">email</label>
+                                <input type="email" name="email" value="<%= locals.oldData && oldData.email? oldData.email : "" %>">
+                                <p><%= error.msg  %></p>
+                                <label for="">contraseña</label>
+                                <input type="password"  name="password" value="">
+                                <p><%= error.msg  %></p>
+                                <input type="file" name="userImage" value="">
+                                <p><%= error.msg  %></p>
+                            </section>
+                            
+                            <% }) %>
+                        <% } %>
+                            <button>enviar</button>
+                            
                 </form>
 
             </section>

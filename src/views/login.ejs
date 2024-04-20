@@ -5,16 +5,18 @@
  <%- include('partials/header') %> 
 
  <section class="content-form">
-    <form action="" class="register-sesion">
-        <h1>Iniciar sesion</h1>
+    <form action="POST" action="" class="register-sesion">
+        <h1 class="referent">Iniciar sesion</h1>
         <section class="register-sesion">
             <label for="">email</label>
-            <input type="text">
+            <input type="email">
             
             <label for="">contraseña</label>
             <input type="password">
         </section>
 
+        <a href="/register">registrarse</a>
+        
 
         <button>enviar</button>
     </form>
