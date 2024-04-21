@@ -1,6 +1,7 @@
 const express = require("express");
-const path = require("path");
+const path = require ("path");
 const app = express();
+const session = require('express-session')
 const puerto = 3000;
 const indexRouter = require ('./Routes/index.routes');
 
@@ -20,5 +21,6 @@ app.use(express.static("public"));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 
+app.use(session({secret:'shh mensaje secreto',saveUninitialized:false,resave:false}));
 
 
