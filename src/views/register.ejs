@@ -3,12 +3,12 @@
 <%- include('partials/head') %>
     <body>
         <%- include('partials/header') %>
-            <section class="">
+            <section class="content-register">
                      
-                        <form action="/register" method="POST" class="" >
+                        <form action="/register" method="POST" class="register" >
                             
                             <h1 class="referent">registro</h1>
-                            <section  class="register-sesion">
+                            <section  class="register">
                                  
                                 <label for="name">nombre</label>
                                 <input type="text" name="name" id="name" value="<%= locals.oldData && oldData.name? oldData.name : ""%>"> 

@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('partials/head') %>
-<body>
- <%- include('partials/header') %> 
 
- <section class="content-form">
-    <form action="POST" action="" class="register-sesion">
-        <h1 class="referent">Iniciar sesion</h1>
-        <section class="register-sesion">
-            <label for="">email</label>
-            <input type="email">
-            
-            <label for="">contraseña</label>
-            <input type="password">
-        </section>
+    <body>
+        <%- include('partials/header') %>
 
-        <a href="/register">registrarse</a>
-        
+            <section class="content-form">
+                <form action="POST" action="" class="register-sesion">
+                    
+                        <h1 class="referent">Iniciar sesion</h1>
+                    
+                    <section class="register-sesion">
+                        <label for="">email</label>
+                        <input type="email">
 
-        <button>enviar</button>
-    </form>
- </section>
+                        <label for="">contraseña</label>
+                        <input type="password">
+                    </section>
+
+                    <a href="/register">registrarse</a>
 
 
-<%- include('partials/footer') %>
-</body>
+                    <button>enviar</button>
+                </form>
+            </section>
+
+
+            <%- include('partials/footer') %>
+    </body>
+
 </html>

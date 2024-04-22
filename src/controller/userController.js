@@ -1,6 +1,7 @@
 
 const {validationResult} = require("express-validator");  
 const bcrypt = require('bcryptjs');
+const db = require("../database/models/index");
 
 const userController={
     index:(req, res)=>{
@@ -25,19 +26,21 @@ const userController={
             let pass = bcrypt.hashSync(req.body.password,10);
             db.Users.create({
 
-                nombre:req.body.name,
-                apellido:req.body.lastName,
-                email:req.body.email,
-                contraseña:pass,
+                NOMBRE:req.body.name,
+                APELLIDO:req.body.lastName,
+                EMAIL:req.body.email,
+                CONTRASEÑA:pass,
+                IMAGEN:__filename,
                 
             }); 
-            res.redirect('/')
+            res.redirect('/home')
         }
         else{
             res.render('register',{
                 errors: errors.mapped(),
                 oldData: req.body
             })
+           
            
         }
     },
@@ -63,6 +66,12 @@ const userController={
     } catch (error) {
         
     }
+
+
+    },
+    update:async(req,res)=>{
+
+        db
     }
 
 
