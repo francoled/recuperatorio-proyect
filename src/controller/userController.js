@@ -165,7 +165,7 @@ const userController = {
             console.log(req.body);
 
             let user = await db.Users.update({
-                ID_CATEGORIA: 2,
+                ID_CATEGORIA:req.session.userLogged.ID_CATEGORIA,
                 NOMBRE: req.body.name,
                 APELLIDO: req.body.lastName,
                 EMAIL: req.body.email,
