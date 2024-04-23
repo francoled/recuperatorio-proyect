@@ -9,7 +9,7 @@ const adminController = {
     loginProcess:req */
     list: async (req, res)=>{
          try {
-             const user = await db.Users.findAll({where:{deleted_at:null}},{include:[{association:'categoria'}]});
+             const user = await db.Users.findAll({where:{deleted_at:null}});
              res.render('usersList',{user: user})
          } 
          catch (error) {
