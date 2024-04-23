@@ -22,6 +22,15 @@
             <div class="d-flex gap-3">
                 <a href="/user/account/<%= user.ID_USERS %>" role="button" class="btn btn-warning">Editar</a>
                 <a href="/logout" role="button" class="btn btn-danger">Cerrar Sesion</a>
+                <% if ( user.ID_CATEGORIA === 1) { %>
+                    <a href="../../admin/users" class="btn btn-primary">
+                    <div class="admin-list-icon">
+                    <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div  class="admin-list-text">
+                        Lista de Usuarios
+                    </div>
+                </a> <% } %>
             </div>
         </main>
 

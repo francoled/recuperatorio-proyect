@@ -37,7 +37,14 @@ router.put('/user/account/:id',guestMiddleware, upload.single("image"), validati
 router.get('/logout',guestMiddleware, userController.logOut);
 
 /* RUTAS PARA ADMIN */
-router.get("/users", adminController.list);
+/* router.get('/', adminController.login); */
+
+router.get("/admin/users", adminController.list);
+router.get('/admin/edit/:id', adminController.edit);
+router.put('/admin/edit/:id', adminController.update);
+
+router.put('/admin/users/delete/:id', adminController.delete);
+
 router.use('/api', apiRoutes);
 
 

@@ -44,7 +44,7 @@ const userController = {
             if (userInDB == undefined) {
                 let image = req.file ? req.file.filename : 'default.png';
                 let user = await db.Users.create({
-                    ID_CATEGORIA: 2,
+                    ID_CATEGORIA: 1,
                     NOMBRE: req.body.name,
                     APELLIDO: req.body.lastName,
                     EMAIL: req.body.email,
