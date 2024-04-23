@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head') %>
+    <%- include('partials/head') %>
 
     <body>
         <%- include('partials/header') %>
-
-
-
-            <div class="datos-user">
-                <section class="image">
-                    <div>
-                        <h1>imagen</h1>
-                        <img src="" alt="">
-                    </div>
-                </section>
-                <section class="datos">
-
-                    <p>dat1</p>
-                    <p>dato2</p>
-                </section>
-
-
-                <div class="botones">
-                    <button >editar</button>
-
-                    <button>salir</button>
-                </div>
+        
+        <main class="mx-5">
+            <h2>Hola <%= user.NOMBRE+' '+user.APELLIDO %></h2>
+            <section class="user-info d-flex my-4">
+                <figure class="avatar-container me-4" style="width: 120px; height: 120px;">
+                    <img class="avatar-image" src="/image/<%= user.IMAGEN %>" alt="username" style="width: 100%;">
+                </figure>
+                <article>
+                    <h3>
+                        <%= user.NOMBRE %> <%= user.APELLIDO %>
+                    </h3>
+                    <p> <%= user.username %></p>
+                    <p><%= user.EMAIL %></p>
+                </article>
+            </section>
+            <div class="d-flex gap-3">
+                <a href="/user/account/<%= user.ID_USERS %>" role="button" class="btn btn-warning">Editar</a>
+                <a href="/logout" role="button" class="btn btn-danger">Cerrar Sesion</a>
             </div>
-            <%- include('partials/footer') %>
+        </main>
+
+        <%- include('partials/footer') %>
     </body>
 
 </html>

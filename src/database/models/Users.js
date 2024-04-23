@@ -2,7 +2,7 @@ module.exports = (sequelize, DataTypes) => {
     let alias = 'Users';
     let columns = {
 
-  ID_USER: {
+  ID_USERS: {
     type: DataTypes.BIGINT,
     allowNull: false,
     primaryKey: true,
@@ -14,25 +14,34 @@ module.exports = (sequelize, DataTypes) => {
   },
   NOMBRE: {
     type: DataTypes.STRING(20),
-    allowNull: true
+    allowNull: false
   },
   APELLIDO: {
     type: DataTypes.STRING(25),
-    allowNull: true
+    allowNull: false
   },
   EMAIL: {
     type: DataTypes.STRING(50),
-    allowNull: true
+    allowNull: false
   },
   CONTRASEÑA: {
     type: DataTypes.STRING(100),
-    allowNull: true
+    allowNull: false
   },
   IMAGEN: {
     type: DataTypes.STRING(100),
-    allowNull: true
+    allowNull: false
+  },
+  deleted_at:{
+    type:DataTypes.DATE,
+    allowNull:true
+  },
+  username:{
+    type:DataTypes.STRING(225),
+    allowNull:false
+
   }
-} 
+    }
  
  let config = {
     tableName: 'users',
