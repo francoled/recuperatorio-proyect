@@ -20,7 +20,8 @@ CREATE TABLE USERS
        APELLIDO VARCHAR(25) NOT NULL,                              
        EMAIL VARCHAR(50)NOT NULL,                              
        CONTRASEÑA VARCHAR(100)NOT NULL,                              
-       IMAGEN VARCHAR(100) NOT NULL,                              
+       IMAGEN VARCHAR(100) NOT NULL, 
+       username VARCHAR(20)NOT NULL,
        PRIMARY KEY
                (
                ID_USERS
